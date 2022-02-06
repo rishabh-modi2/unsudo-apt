@@ -475,10 +475,9 @@ def ind():
     print("ruk")
     sleep(1500)
     pass
-while i > 2:
-  try:
-    comment()
-  except Exception as e:
-    print(e)
-    sleep(1000)
-    pass
+try:
+  comment()
+except Exception as e:
+  print(e)
+  sleep(1000)
+  pass
