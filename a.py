@@ -1,4 +1,4 @@
-import praw, os, random, requests, config, emojis, regex
+import praw, os, random, requests, config#, emojis, regex
 from time import sleep
 #import word
 
@@ -120,23 +120,23 @@ def comment():
       #print(i, end='\r')
       #print(comment.body, end='\r')
       if i > 105:
-          if comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
-            def split_count(text):
+#           if comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+#             def split_count(text):
 
-                emoji_list = []
-                data = regex.findall(r'\X', text)
-                for word in data:
-                    if emoji.is_emoji(word):
-                      comment.reply("emoji detected,, Comment rejected")
-                    if any(char in emoji.UNICODE_EMOJI['en'] for char in word):
-                        emoji_list.append(word)
-                return emoji_list
-                counter = split_count(line[0])
-                print(' '.join(emoji for emoji in counter))
-                #print(word)
-                #if emoji.is_emoji(word):
-                #  comment.reply("emoji detected,, Comment rejected")
-                #  print("emoji detected")
+#                 emoji_list = []
+#                 data = regex.findall(r'\X', text)
+#                 for word in data:
+#                     if emoji.is_emoji(word):
+#                       comment.reply("emoji detected,, Comment rejected")
+#                     if any(char in emoji.UNICODE_EMOJI['en'] for char in word):
+#                         emoji_list.append(word)
+#                 return emoji_list
+#                 counter = split_count(line[0])
+#                 print(' '.join(emoji for emoji in counter))
+#                 #print(word)
+#                 #if emoji.is_emoji(word):
+#                 #  comment.reply("emoji detected,, Comment rejected")
+#                 #  print("emoji detected")
           if a1 in comment.body and comment.id not in comments_replied_to and comment.submission not in comments_replied_to and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(45)
             comment.reply(aa1)
