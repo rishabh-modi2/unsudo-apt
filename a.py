@@ -1,4 +1,4 @@
-import praw, os, random, requests, config
+import praw, os, random, requests, config, emojis, regex
 from time import sleep
 #import word
 
@@ -10,6 +10,7 @@ reddit = praw.Reddit(
     password="rishabh2003",
     ratelimit_seconds=900,
 )
+
 a1 = "gandu" or "Gandu"
 aa1 = "raat kali ek khwab me aayi aur\nsubeh muth ka karan bani\nHo gayi Bakchodi ab ja padhne"
 a2 = "dank" or "Dank"
@@ -119,7 +120,24 @@ def comment():
       #print(i, end='\r')
       #print(comment.body, end='\r')
       if i > 105:
-          if a1 in comment.body and comment.id not in comments_replied_to and comment.submission not in comments_replied_to and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+        if comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+            def split_count(text):
+
+                emoji_list = []
+                data = regex.findall(r'\X', text)
+                for word in data:
+                    if emoji.is_emoji(word):
+                      comment.reply("emoji detected,, Comment rejected")
+                    if any(char in emoji.UNICODE_EMOJI['en'] for char in word):
+                        emoji_list.append(word)
+                return emoji_list
+                counter = split_count(line[0])
+                print(' '.join(emoji for emoji in counter))
+                #print(word)
+                #if emoji.is_emoji(word):
+                #  comment.reply("emoji detected,, Comment rejected")
+                #  print("emoji detected")
+              if a1 in comment.body and comment.id not in comments_replied_to and comment.submission not in comments_replied_to and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(45)
             comment.reply(aa1)
             #print(comment.id)
