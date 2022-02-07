@@ -511,9 +511,9 @@ def comment():
 
           f = open("reply_comment.txt", "a")
           f.write(comment.id + " ")
-          f.write(comment.submission + "no")
-          if comment.submission + "no" in comments_replied_to:
-              print("found text")
+          f.write(comment.submission)
+          #if comment.submission + "  " in comments_replied_to:
+          #    print("found text")
               #f.write(submission + " ")
   except Exception as e:
     print("bohot jayada hora hai")
