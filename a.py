@@ -137,7 +137,7 @@ def comment():
                 #if emoji.is_emoji(word):
                 #  comment.reply("emoji detected,, Comment rejected")
                 #  print("emoji detected")
-              if a1 in comment.body and comment.id not in comments_replied_to and comment.submission not in comments_replied_to and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a1 in comment.body and comment.id not in comments_replied_to and comment.submission not in comments_replied_to and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(45)
             comment.reply(aa1)
             #print(comment.id)
