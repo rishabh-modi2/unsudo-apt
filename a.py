@@ -120,7 +120,7 @@ def comment():
       #print(i, end='\r')
       #print(comment.body, end='\r')
       if i > 105:
-        if comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             def split_count(text):
 
                 emoji_list = []
