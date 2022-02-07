@@ -104,7 +104,7 @@ a43 = "ma chuda" or "maa chuda" or "Maa chuda" or "Maa Chuda"
 aa43 = "I am Not a muslim who can fuck own mum and sisters so i can not do this sorry,,,Agar tu apni chudana chahta hai to mera lund taiyar hai"
 a44 = "tanmay"
 aa44 = "tanamy bhat haye haye"
-#s = random.randint(60,600)
+s = random.randint(10,20)
 def comment():
   s = 0
   with open("reply_comment.txt", "r") as f:
