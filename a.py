@@ -527,9 +527,9 @@ def comment():
         #     # ##print(i)
         #     #comment.upvote()
 
-          f = open("reply_comment.txt", "a")
-          f.write(comment.id + " ")
-          f.write(comment.submission)
+          with open ("reply_comment.txt", "a") as f:
+            f.write(comment.id + " ")
+            f.write(comment.submission)
           #if comment.submission + "  " in comments_replied_to:
           #    print("found text")
               #f.write(submission + " ")
