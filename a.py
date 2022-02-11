@@ -106,11 +106,13 @@ aa44 = "tanamy bhat haye haye"
 s = random.randint(10,20)
 def comment():
   s = 0
-  with open("reply_comment.txt", "r") as f:
-          comments_replied_to = f.read()
-          comments_replied_to = f.read()
-          comments_replied_to = comments_replied_to.split("\n")
-          comments_replied_to = filter(None, comments_replied_to)
+  # with open("reply_comment.txt", "r") as f:
+  #         comments_replied_to = f.read()
+  #         comments_replied_to = f.read()
+  #         comments_replied_to = comments_replied_to.split("\n")
+  #         comments_replied_to = filter(None, comments_replied_to)
+  comments_replied_to = []
+  submission_id = []
   i = 0
   try:
     for comment in reddit.subreddit('IndianDankMemes').stream.comments():
@@ -118,7 +120,7 @@ def comment():
       #print(i, end='\r')
       #print(comment.body, end='\r')
       if i > 105:
-          if a1 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a1 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa1)
             #print(comment.id)
@@ -126,7 +128,7 @@ def comment():
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a2 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a2 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa2)
             #print(comment.id)
@@ -134,7 +136,7 @@ def comment():
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a3 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a3 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa3)
             #print(comment.id)
@@ -142,7 +144,7 @@ def comment():
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a4 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a4 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa4)
             #sleep(s)
@@ -150,7 +152,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a5 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a5 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa5)
             #sleep(s)
@@ -158,7 +160,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a6 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a6 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa6)
             #sleep(s)
@@ -166,7 +168,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a7 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a7 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa7)
             #sleep(s)
@@ -174,7 +176,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a8 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a8 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa8)
             #sleep(s)
@@ -182,7 +184,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a9 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a9 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa9)
             #sleep(s)
@@ -190,7 +192,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a10 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a10 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa10)
             #sleep(s)
@@ -198,7 +200,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a11 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a11 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa11)
             #sleep(s)
@@ -206,7 +208,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a12 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a12 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa12)
             #sleep(s)
@@ -214,7 +216,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a13 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a13 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa13)
             #sleep(s)
@@ -222,7 +224,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a14 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a14 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa14)
             #sleep(s)
@@ -230,7 +232,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a15 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a15 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa15)
             #sleep(s)
@@ -238,7 +240,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a16 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a16 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa16)
             #sleep(s)
@@ -246,7 +248,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a17 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a17 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa17)
             #sleep(s)
@@ -254,7 +256,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a18 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a18 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa18)
             #sleep(s)
@@ -262,7 +264,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a19 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a19 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa19)
             #sleep(s)
@@ -270,7 +272,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a20 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a20 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa20)
             #sleep(s)
@@ -278,7 +280,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a21 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a21 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa21)
             #sleep(s)
@@ -286,7 +288,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a22 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a22 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa22)
             #sleep(s)
@@ -294,7 +296,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a23 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a23 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa23)
             #sleep(s)
@@ -302,7 +304,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a24 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a24 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             sleep(s)
             comment.reply(aa24)
@@ -311,7 +313,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a25 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a25 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             sleep(s)
             comment.reply(aa25)
@@ -320,7 +322,7 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a26 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a26 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             sleep(s)
             comment.reply(aa26)
@@ -329,35 +331,35 @@ def comment():
             print(i)
             comment.upvote()
             #print(comment.id)
-          if a27 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a27 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa27)
             #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a28 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a28 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa28)
             #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a29 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a29 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa29)
             #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a30 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a30 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa30)
             #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a31 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a31 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa31)
             #sleep(s)
@@ -367,7 +369,7 @@ def comment():
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a32 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a32 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa32)
             #sleep(s)
@@ -376,28 +378,28 @@ def comment():
             comment.upvote()
             #print(comment.id)
             #print(comment.id)
-          if a33 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a33 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa33)
             #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a34 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a34 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa34)
           #   #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a35 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a35 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa35)
           #   #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a36 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a36 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa36)
           #   #sleep(s)
@@ -405,105 +407,105 @@ def comment():
             print(i)
             comment.upvote()
             comment.upvote()
-          if a37 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a37 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa37)
           #   #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a38 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a38 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa38)
           #   #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a39 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a39 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa39)
           #   #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a40 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a40 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa40)
           #  #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a41 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a41 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa41)
             #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a42 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a42 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa42)
           #  #sleep(s)
             #print(comment.id)
             print(i)
             comment.upvote()
-          if a43 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a43 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa43)
           #  #sleep(s)
           #   #print(comment.id)
           #   #print(i)
             comment.upvote()
-          if a44 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          if a44 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
             sleep(s)
             comment.reply(aa44)
           #  #sleep(s)
           #   #print(comment.id)
           #   #print(i)
             comment.upvote()
-          #if a45 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          #if a45 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
           #  sleep(s)
             #comment.reply(aa45)
           #  #sleep(s)
           #   #print(comment.id)
           #   #print(i)
             #comment.upvote()
-          #if a46 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          #if a46 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
           #  sleep(s)
             #comment.reply(aa46)
           #  #sleep(s)
           #   #print(comment.id)
           #   #print(i)
            # comment.upvote()
-          #if a47 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          #if a47 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
           #  sleep(s)
             #comment.reply(aa47)
           #  #sleep(s)
           #   #print(comment.id)
           #   #print(i)
           #  comment.upvote()
-          #if a48 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          #if a48 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
           #  sleep(s)
             #comment.reply(aa48)
           #  #sleep(s)
           #   #print(comment.id)
           #   #print(i)
           #  comment.upvote()
-          #if a49 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          #if a49 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
           #  sleep(s)
             #comment.reply(aa49)
           #  #sleep(s)
           #   #print(comment.id)
           #   #print(i)
            # comment.upvote()
-          #if a50 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          #if a50 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
           #  sleep(s)
             #comment.reply(aa50)
           #  #sleep(s)
           #   #print(comment.id)
           #   #print(i)
            # comment.upvote()
-          # if a51 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in open("reply_comment.txt", "a").read() and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
+          # if a51 in comment.body and comment.id not in comments_replied_to and comment.submission.id not in submission_id and comment.author != reddit.user.me() and comment.author != "AutoModerator" and comment.author != "QualityVote":
           #   sleep(s)
             #comment.reply(aa51)
           #   #sleep(s)
@@ -511,9 +513,11 @@ def comment():
             # #print(i)
             #comment.upvote()
 
-          with open ("reply_comment.txt", "a") as f:
-            f.write(comment.id + " ")
-            f.write(comment.submission.id + " ")
+          # with open ("reply_comment.txt", "a") as f:
+          #   f.write(comment.id + " ")
+          #   f.write(comment.submission.id + " ")
+          submission_id.append(comment.submission.id)
+          comments_replied_to.append(comment.id)
   except Exception as e:
     print("bohot jayada hora hai")
     print(e)
