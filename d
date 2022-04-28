@@ -1204,13 +1204,13 @@ oembed:
 # you use either captcha, email, or token-based verification to verify that new users are not bots. In order to enable registration
 # without any verification, you must also set `enable_registration_without_verification`, found below.
 #
-#enable_registration: false
+enable_registration: true
 
 # Enable registration without email or captcha verification. Note: this option is *not* recommended,
 # as registration without verification is a known vector for spam and abuse. Defaults to false. Has no effect
 # unless `enable_registration` is also enabled.
 #
-#enable_registration_without_verification: true
+enable_registration_without_verification: true
 
 # Time that a user's session remains valid for, after they log in.
 #
